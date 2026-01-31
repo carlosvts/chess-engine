@@ -1,0 +1,41 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "chess-engine"
+version = "0.1.0"
+description = "Chess Engine."
+readme = "README.md"
+keywords = ["chess", "bot", "chess-engine", "machine-learning"]
+license = {text = "GPL-3.0"}
+authors = [
+    {name = "Carlos Vinícius"},
+    {name = "Emerson Proenca"}
+]
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Games/Entertainment :: Board Games",
+]
+dependencies = [
+    "numpy>=1.24.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/carlosvts/chess-engine/"
+Repository = "https://github.com/carlosvts/chess-engine.git"
+Issues = "https://github.com/carlosvts/chess-engine/issues"
+Changelog = "https://github.com/carlosvts/chess-engine/releases"
+
+[tool.setuptools.packages.find]
+where = ["python"]
