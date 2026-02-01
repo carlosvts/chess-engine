@@ -10,6 +10,7 @@ enum Color : int
 {
     WHITE = 0,
     BLACK = 1,
+    BOTH = 2, 
 };
 
 enum Piece : int {
@@ -20,6 +21,16 @@ enum Piece : int {
     QUEEN = 4,
     KING = 5,
     NO_PIECE = 6
+};
+
+enum Castling : uint8_t
+{
+    NO_CASTLING        = 0,
+
+    WHITE_KINGSIDE     = 1 << 0, // White O-O
+    WHITE_QUEENSIDE    = 1 << 1, // White O-O-O
+    BLACK_KINGSIDE     = 1 << 2, // Black O-O
+    BLACK_QUEENSIDE    = 1 << 3  // Black O-O-O
 };
 
 // Translating everything to power of 2
@@ -46,3 +57,5 @@ enum PieceCode : uint8_t {
 #define COLORS 2
 #define PIECE_TYPES 6
 #define NUM_SQUARES 64
+#define OCCUPANCY 3 // A square can be occupied by black, white or both
+#define ENPASSANT_NO_SQUARE -1 // No square available for enpassant
