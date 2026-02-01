@@ -1,0 +1,48 @@
+#pragma once
+#include <cstdint>
+
+/* Namespaces */
+using Bitboard = uint64_t; // Every bit is one square
+using Square = int;  // A1 = 0, H8 = 63
+
+/*     Enums  */
+enum Color : int
+{
+    WHITE = 0,
+    BLACK = 1,
+};
+
+enum Piece : int {
+    PAWN = 0,
+    KNIGHT = 1,
+    BISHOP = 2,
+    ROOK = 3,
+    QUEEN = 4,
+    KING = 5,
+    NO_PIECE = 6
+};
+
+// Translating everything to power of 2
+// So all of bitwise operations are valid
+// [WARNING] Remember to use only PieceCode for bitwise
+// E.g WHITE_CODE | PAWN_CODE gives a white pawn
+enum PieceCode : uint8_t {
+    EMPTY  = 0,
+
+    PAWN_CODE   = 1 << 0,
+    KNIGHT_CODE = 1 << 1,
+    BISHOP_CODE = 1 << 2,
+    ROOK_CODE   = 1 << 3,
+    QUEEN_CODE  = 1 << 4,
+    KING_CODE   = 1 << 5,
+
+    WHITE_CODE  = 1 << 6,
+    BLACK_CODE  = 1 << 7
+};
+
+/*
+    Constants
+*/
+#define COLORS 2
+#define PIECE_TYPES 6
+#define NUM_SQUARES 64
