@@ -5,6 +5,7 @@
 
 namespace py = pybind11;
 
+// Basic structure for PYBIND11
 PYBIND11_MODULE(chess_engine_cpp, m)
 {
     m.doc() = "Chess engine Python Bindings";
