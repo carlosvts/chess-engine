@@ -54,8 +54,8 @@ enum PieceCode : uint8_t {
 /*
     Constants
 */
-#define COLORS 2
-#define PIECE_TYPES 6
-#define NUM_SQUARES 64
-#define OCCUPANCY 3 // A square can be occupied by black, white or both
-#define ENPASSANT_NO_SQUARE -1 // No square available for enpassant
+constexpr int COLORS = 2;
+constexpr int PIECE_TYPES = 6;
+constexpr int NUM_SQUARES = 64;
+constexpr int OCCUPANCY = 3; // A square can be occupied by black, white or both
+constexpr Square NO_SQUARE = -1; // No square available for enpassant
