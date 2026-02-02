@@ -13,14 +13,14 @@ enum Color : int
     BOTH = 2, 
 };
 
-enum Piece : int {
-    PAWN = 0,
-    KNIGHT = 1,
-    BISHOP = 2,
-    ROOK = 3,
-    QUEEN = 4,
-    KING = 5,
-    NO_PIECE = 6
+enum Piece : uint8_t {
+    NO_PIECE = 0,
+    PAWN = 1,
+    KNIGHT = 2,
+    BISHOP = 3,
+    ROOK = 4,
+    QUEEN = 5,
+    KING = 6
 };
 
 enum Castling : uint8_t
