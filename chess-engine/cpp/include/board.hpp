@@ -21,6 +21,7 @@ class Board
     // Computes occupancy from piece bitboards
     // It does not modify board state
     Bitboard computeOccupancy() const;
+    
     Bitboard pieces(Color color, Piece piece) const;
     bool isSquareOccupied(Square square) const;
     void updateOccupancy();
@@ -42,7 +43,7 @@ class Board
         Bitboard occupancy[OCCUPANCY];  // WHITE, BLACK, BOTH. We can get BOTH by doing occupancy[0] | occupancy[1]
 
         Color sideToMove;
-        uint8_t canCastle; // stores if can castle or not
+        uint8_t canCastle;      // stores if can castle or not
         Square enpassantSquare; // stores the square that can be enpassant'ed, otherwise -1
         
         // Mailbox representation of board
